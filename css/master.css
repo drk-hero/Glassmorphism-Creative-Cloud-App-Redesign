@@ -1,0 +1,443 @@
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+div,
+section,
+main,
+figure,
+ul,
+li,
+nav {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    background: linear-gradient(-45deg, #2e2c67, #2f2d68, #39b9f5, #7e56a2, #c1213b, #7b1225);
+    background-size: 400% 400%;
+    animation: bacground1 15s ease infinite;
+}
+
+@keyframes bacground1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.background-color {
+    width: 90%;
+    height: 95vh;
+    margin: 10px auto;
+    background-color: #1b1b3c68;
+    border: solid 1px #1b1b3c73;
+    border-radius: 15px;
+    box-shadow: 0px 0 20px #000000b8;
+}
+
+.nav-parent {
+    width: 100%;
+    height: 55px;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #3d6c9357;
+    padding: 0 50px;
+}
+
+.nav-parent>div {
+    /* width: 25%; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-parent>div:first-child>span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.nav-parent>div:first-child>span>svg {
+    opacity: 0;
+    transition: .3s;
+}
+
+.nav-parent>div:first-child>span:hover>svg {
+    opacity: 1;
+}
+
+.nav-parent>div:first-child>span:nth-of-type(1) {
+    background-color: #ff5c4c;
+}
+
+.nav-parent>div:first-child>span:nth-of-type(2) {
+    background-color: #ffbf38;
+}
+
+.nav-parent>div:first-child>span:nth-of-type(3) {
+    background-color: #66e14f;
+}
+
+.nav-parent>ul {
+    /* width: 30%; */
+    height: 100%;
+    /* background-color: red; */
+    /* border: 1px solid blueviolet; */
+    justify-content: space-around;
+}
+
+.nav-parent>ul>li {
+    height: 100%;
+    margin: 0 10px;
+    transition: all .3s;
+}
+
+.nav-parent>ul>li>a {
+    width: 100%;
+    height: 100%;
+    /* background-color: #ffbf38; */
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-parent>ul>li:hover {
+    border-bottom: 1px solid white;
+}
+
+.nav-form>input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #161834b8;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-parent>div:last-child>span {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 5px;
+}
+
+.nav-parent>div:last-child>span:last-child>img {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-left: 10px; */
+}
+
+
+/* nav left pos */
+
+
+/* width */
+
+.body-parent-scroll::-webkit-scrollbar,
+.nav-parent-left::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+.body-parent-scroll::-webkit-scrollbar-track,
+.nav-parent-left::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+.body-parent-scroll::-webkit-scrollbar-thumb:hover,
+.nav-parent-left::-webkit-scrollbar-thumb:hover {
+    background: #213253;
+}
+
+.body-parent-scroll::-webkit-scrollbar-thumb,
+.nav-parent-left::-webkit-scrollbar-thumb {
+    background: #213253;
+    border-radius: 10px;
+}
+
+.nav-parent-left {
+    width: 250px;
+    height: 82vh;
+    position: fixed;
+    left: 5%;
+    top: 80px;
+    /* border: 2px solid red; */
+    flex-flow: column;
+    padding: 10px 25px;
+    overflow-y: scroll;
+}
+
+.nav-parent-left>h3 {
+    color: #9ca2b9;
+    font-size: 18px;
+    margin: 25px 0 10px;
+}
+
+.nav-parent-left>section {
+    width: 100%;
+    flex-flow: column;
+}
+
+.nav-parent-left>section>div {
+    width: 100%;
+    margin: 15px 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .5s;
+    border-radius: 2px;
+}
+
+.nav-parent-left>section>div:hover {
+    background-color: rgb(178 178 178 / 20%);
+}
+
+.nav-parent-left>section>div>svg {
+    color: white;
+    font-size: 17px;
+}
+
+.nav-parent-left>section>div>p {
+    color: white;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.notfi-blue {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3066ef;
+    color: white;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+
+/* nav-parent-top */
+
+.nav-parent-top {
+    width: 77%;
+    height: 50px;
+    position: fixed;
+    top: 66px;
+    right: 5%;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.nav-parent-top>* {
+    padding: 0 20px;
+    color: white;
+}
+
+.nav-parent-top>.section-platform {
+    width: 40%;
+    height: 100%;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.section-platform>div {
+    height: 100%;
+    /* width: 100%; */
+    transition: all .3s;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 1px;
+}
+
+.section-platform>div:hover {
+    border-bottom: 1px solid whitesmoke;
+}
+
+
+/* body-parent-scroll */
+
+.body-parent-scroll {
+    width: 76.9%;
+    height: 78vh;
+    overflow-y: scroll;
+    /* background-color: red; */
+    position: fixed;
+    top: 115px;
+    right: 5%;
+    padding: 15px 30px;
+    align-items: flex-start;
+}
+
+.body-parent-scroll>h2 {
+    margin: 30px 0 15px;
+}
+
+.body-parent-scroll>h2 {
+    width: 100%;
+    color: #858898;
+}
+
+.Installed-box-section {
+    width: 100%;
+    flex-flow: column;
+    border: 1px solid #282d47;
+    border-radius: 6px;
+    background-color: #3a406643;
+}
+
+.Installed-box:not(.border-none) {
+    border-bottom: 1px solid #494c6f;
+}
+
+.Installed-box {
+    width: 100%;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.Installed-box>div {
+    align-items: center;
+    color: white;
+}
+
+.Installed-box>div:first-child>p {
+    margin-left: 10px;
+}
+
+.Installed-box>div:nth-of-type(2)>span {
+    width: 10px;
+    height: 10px;
+    background-color: #3bf083;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.Installed-box:nth-of-type(2)>div:nth-of-type(2)>span {
+    background-color: #396df0;
+}
+
+.Installed-box:nth-of-type(2)>div:nth-of-type(3) {
+    background-color: #3a6df0;
+    color: white;
+    border: none;
+}
+
+.Installed-box>div:last-child {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.Installed-box>div:last-child:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px rgb(0 0 0);
+}
+
+.Apps-your-plan {
+    width: 100%;
+    flex-flow: wrap row;
+}
+
+.Apps-your-plan>section {
+    width: 20%;
+    background-color: rgb(255 255 255 / 8%);
+    border: 1px solid #38283a;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 30px;
+    color: white;
+}
+
+.Apps-your-plan>section>p {
+    margin: 15px 0;
+}
+
+.Apps-your-plan>section>div:first-child>h3 {
+    margin-left: 10px;
+}
+
+.Apps-your-plan>section>div:first-child {
+    align-items: center;
+}
+
+.Apps-your-plan>section>div:last-child {
+    width: 100%;
+    padding: 10px 10px 0;
+    border-top: 1px solid rgba(179, 179, 179, 0.441);
+    justify-content: flex-end;
+}
+
+.Apps-your-plan>section>div:last-child>span {
+    padding: 10px;
+    background-color: #3a6df0;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: none;
+    font-weight: 600;
+}
+
+.Apps-your-plan>section>div:last-child>span:hover {
+    background-color: #0c50fb;
+}
+
+.bacground-images {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.bacground-images>img {
+    width: 90%;
+    margin: auto;
+    background-size: cover;
+}
